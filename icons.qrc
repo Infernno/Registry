@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/Forms/Icons">
+        <file>Forms/Icons/add.svg</file>
+        <file>Forms/Icons/admin.svg</file>
+        <file>Forms/Icons/app.svg</file>
+        <file>Forms/Icons/card.svg</file>
+        <file>Forms/Icons/doctor.svg</file>
+        <file>Forms/Icons/edit.svg</file>
+        <file>Forms/Icons/exit.svg</file>
+        <file>Forms/Icons/identity.svg</file>
+        <file>Forms/Icons/info.svg</file>
+        <file>Forms/Icons/key.svg</file>
+        <file>Forms/Icons/patient.svg</file>
+        <file>Forms/Icons/registrator.svg</file>
+        <file>Forms/Icons/remove.svg</file>
+        <file>Forms/Icons/time.svg</file>
+    </qresource>
+</RCC>

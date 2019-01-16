@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RegistratorPage</class>
+ <widget class="QWidget" name="RegistratorPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>539</width>
+    <height>318</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="TabWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="PatientsTab">
+      <attribute name="icon">
+       <iconset resource="../../icons.qrc">
+        <normaloff>:/Forms/Icons/Forms/Icons/patient.svg</normaloff>:/Forms/Icons/Forms/Icons/patient.svg</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Пациенты</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="2" column="0" colspan="3">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Действия</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="2">
+           <widget class="QPushButton" name="RemovePatientButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../icons.qrc">
+              <normaloff>:/Forms/Icons/Forms/Icons/remove.svg</normaloff>:/Forms/Icons/Forms/Icons/remove.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="AddPatientButton">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../icons.qrc">
+              <normaloff>:/Forms/Icons/Forms/Icons/add.svg</normaloff>:/Forms/Icons/Forms/Icons/add.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="EditPatientButton">
+            <property name="text">
+             <string>Редактировать</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../icons.qrc">
+              <normaloff>:/Forms/Icons/Forms/Icons/edit.svg</normaloff>:/Forms/Icons/Forms/Icons/edit.svg</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="3">
+        <widget class="QTableWidget" name="PatientTableWidget"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="AppointmentsTab">
+      <attribute name="icon">
+       <iconset resource="../../icons.qrc">
+        <normaloff>:/Forms/Icons/Forms/Icons/time.svg</normaloff>:/Forms/Icons/Forms/Icons/time.svg</iconset>
+      </attribute>
+      <attribute name="title">
+       <string>Записи к врачам</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="1" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Действия</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="AddAppointmentButton">
+            <property name="text">
+             <string>Записать пациента</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../icons.qrc">
+              <normaloff>:/Forms/Icons/Forms/Icons/add.svg</normaloff>:/Forms/Icons/Forms/Icons/add.svg</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="RemoveAppointmentButton">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>Удалить запись</string>
+            </property>
+            <property name="icon">
+             <iconset resource="../../icons.qrc">
+              <normaloff>:/Forms/Icons/Forms/Icons/remove.svg</normaloff>:/Forms/Icons/Forms/Icons/remove.svg</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QTableWidget" name="AppointmentsTableWidget"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../icons.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>AddPatientButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RegistratorPage</receiver>
+   <slot>addPatientButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>EditPatientButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RegistratorPage</receiver>
+   <slot>editPatientButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>268</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RemovePatientButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RegistratorPage</receiver>
+   <slot>removePatientButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>429</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AddAppointmentButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RegistratorPage</receiver>
+   <slot>addAppointmentButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>147</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>RemoveAppointmentButton</sender>
+   <signal>clicked()</signal>
+   <receiver>RegistratorPage</receiver>
+   <slot>removeAppointmentButton()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>389</x>
+     <y>273</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>269</x>
+     <y>158</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>addPatientButton()</slot>
+  <slot>editPatientButton()</slot>
+  <slot>removePatientButton()</slot>
+  <slot>addAppointmentButton()</slot>
+  <slot>removeAppointmentButton()</slot>
+ </slots>
+</ui>
